@@ -18,7 +18,7 @@
 
 	<modules>
 
-		<module>idei-uml</module>
+		<module>idei.uml</module>
 
 
 		<!-- MAVEN PLUGINS -->
