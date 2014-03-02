@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_P2RN4aGEEeOu-7RMSxLNpQ" name="skoolan">
+  <elementImport xmi:id="_P5Uh4KGEEeOu-7RMSxLNpQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_P5gvIKGEEeOu-7RMSxLNpQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_P5gvIaGEEeOu-7RMSxLNpQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_P5gvIqGEEeOu-7RMSxLNpQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_TbiEYKGEEeOu-7RMSxLNpQ" name="Group">
+    <ownedAttribute xmi:id="_55IrYKGHEeOu-7RMSxLNpQ" name="code" aggregation="composite"/>
+    <ownedAttribute xmi:id="_65y3IKGHEeOu-7RMSxLNpQ" name="description" aggregation="composite"/>
+    <ownedAttribute xmi:id="_LAt3YKGIEeOu-7RMSxLNpQ" name="classroom" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_fO8BAKGEEeOu-7RMSxLNpQ" name="Teacher"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_gkGdIKGEEeOu-7RMSxLNpQ" name="Classroom">
+    <ownedAttribute xmi:id="_R0nCgKGHEeOu-7RMSxLNpQ" name="code" aggregation="composite"/>
+    <ownedAttribute xmi:id="_Z5Z_YKGHEeOu-7RMSxLNpQ" name="description" aggregation="composite"/>
+    <ownedAttribute xmi:id="_dyaRQKGHEeOu-7RMSxLNpQ" name="alternative" aggregation="composite"/>
+    <ownedAttribute xmi:id="_kYIBAKGHEeOu-7RMSxLNpQ" name="capacity" aggregation="composite"/>
+    <ownedOperation xmi:id="_V2rJwKGHEeOu-7RMSxLNpQ" name="operation"/>
+    <ownedOperation xmi:id="_WT87oKGHEeOu-7RMSxLNpQ" name="operation1"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_x8aMwKGEEeOu-7RMSxLNpQ" name="Subject"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Aou3QKGFEeOu-7RMSxLNpQ" name="Alumn"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_dRS9sKGGEeOu-7RMSxLNpQ" name="School"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_V7BMgKGuEeOu-7RMSxLNpQ" name="Course"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ca8n4KGvEeOu-7RMSxLNpQ" name="Schedule"/>
+</uml:Package>
