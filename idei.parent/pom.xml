@@ -19,6 +19,10 @@
 	<modules>
 
 		<module>idei.uml</module>
+		
+		<module>idei.skoolan</module>
+		
+		<module>idei.scheduler</module>
 
 
 		<!-- MAVEN PLUGINS -->
