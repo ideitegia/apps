@@ -48,7 +48,7 @@
     </children>
     <styles xmi:type="notation:CanonicalStyle" xmi:id="_TcMywaGEEeOu-7RMSxLNpQ"/>
     <element xmi:type="uml:Class" href="skoolan.uml#_TbiEYKGEEeOu-7RMSxLNpQ"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TcMywqGEEeOu-7RMSxLNpQ" x="525" y="65" width="271" height="131"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TcMywqGEEeOu-7RMSxLNpQ" x="345" y="90" width="146" height="126"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_fPCHoKGEEeOu-7RMSxLNpQ" type="2001" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_fPCHo6GEEeOu-7RMSxLNpQ" type="5003">
@@ -75,7 +75,7 @@
     </children>
     <styles xmi:type="notation:CanonicalStyle" xmi:id="_fPCHoaGEEeOu-7RMSxLNpQ"/>
     <element xmi:type="uml:Class" href="skoolan.uml#_fO8BAKGEEeOu-7RMSxLNpQ"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fPCHoqGEEeOu-7RMSxLNpQ" x="350" y="540" width="266" height="131"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fPCHoqGEEeOu-7RMSxLNpQ" x="185" y="530" width="166" height="136"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_gkGdIaGEEeOu-7RMSxLNpQ" type="2001" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_gkGdJKGEEeOu-7RMSxLNpQ" type="5003">
@@ -118,7 +118,7 @@
     </children>
     <styles xmi:type="notation:CanonicalStyle" xmi:id="_gkGdIqGEEeOu-7RMSxLNpQ"/>
     <element xmi:type="uml:Class" href="skoolan.uml#_gkGdIKGEEeOu-7RMSxLNpQ"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gkGdI6GEEeOu-7RMSxLNpQ" x="165" y="65" width="256" height="131"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gkGdI6GEEeOu-7RMSxLNpQ" x="55" y="85" width="186" height="156"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_x8gTYKGEEeOu-7RMSxLNpQ" type="2001" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_x8gTY6GEEeOu-7RMSxLNpQ" type="5003">
@@ -145,7 +145,7 @@
     </children>
     <styles xmi:type="notation:CanonicalStyle" xmi:id="_x8gTYaGEEeOu-7RMSxLNpQ"/>
     <element xmi:type="uml:Class" href="skoolan.uml#_x8aMwKGEEeOu-7RMSxLNpQ"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_x8gTYqGEEeOu-7RMSxLNpQ" x="165" y="265" width="256" height="131"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_x8gTYqGEEeOu-7RMSxLNpQ" x="45" y="290" width="186" height="141"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_Ao094KGFEeOu-7RMSxLNpQ" type="2001" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_Ao0946GFEeOu-7RMSxLNpQ" type="5003">
@@ -172,7 +172,7 @@
     </children>
     <styles xmi:type="notation:CanonicalStyle" xmi:id="_Ao094aGFEeOu-7RMSxLNpQ"/>
     <element xmi:type="uml:Class" href="skoolan.uml#_Aou3QKGFEeOu-7RMSxLNpQ"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ao094qGFEeOu-7RMSxLNpQ" x="670" y="540" width="266" height="136"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ao094qGFEeOu-7RMSxLNpQ" x="480" y="535" width="176" height="141"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_dRWBAKGGEeOu-7RMSxLNpQ" type="2001" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_dRWoEKGGEeOu-7RMSxLNpQ" type="5003">
@@ -199,7 +199,7 @@
     </children>
     <styles xmi:type="notation:CanonicalStyle" xmi:id="_dRWBAaGGEeOu-7RMSxLNpQ"/>
     <element xmi:type="uml:Class" href="skoolan.uml#_dRS9sKGGEeOu-7RMSxLNpQ"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dRWBAqGGEeOu-7RMSxLNpQ" x="935" y="260" width="221" height="166"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dRWBAqGGEeOu-7RMSxLNpQ" x="710" y="300" width="161" height="156"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_V7BMgaGuEeOu-7RMSxLNpQ" type="2001" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_V7BMhKGuEeOu-7RMSxLNpQ" type="5003">
@@ -226,7 +226,7 @@
     </children>
     <styles xmi:type="notation:CanonicalStyle" xmi:id="_V7BMgqGuEeOu-7RMSxLNpQ"/>
     <element xmi:type="uml:Class" href="skoolan.uml#_V7BMgKGuEeOu-7RMSxLNpQ"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V7BMg6GuEeOu-7RMSxLNpQ" x="905" y="65" width="281" height="136"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V7BMg6GuEeOu-7RMSxLNpQ" x="625" y="95" width="161" height="136"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_ca8n4aGvEeOu-7RMSxLNpQ" type="2001" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_ca8n5KGvEeOu-7RMSxLNpQ" type="5003">
@@ -253,7 +253,7 @@
     </children>
     <styles xmi:type="notation:CanonicalStyle" xmi:id="_ca8n4qGvEeOu-7RMSxLNpQ"/>
     <element xmi:type="uml:Class" href="skoolan.uml#_ca8n4KGvEeOu-7RMSxLNpQ"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ca8n46GvEeOu-7RMSxLNpQ" x="520" y="235" width="321" height="231"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ca8n46GvEeOu-7RMSxLNpQ" x="315" y="280" width="286" height="176"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_P6LdgaGEEeOu-7RMSxLNpQ"/>
   <styles xmi:type="uml2tools.notation:U2TDiagramCanonicalStyle" xmi:id="_P6LdgqGEEeOu-7RMSxLNpQ"/>
