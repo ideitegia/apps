@@ -9,7 +9,6 @@
 	<name>SKOOLAN</name>
 	<description>EDUCATION CENTER UNIFIED MANAGEMENT</description>
 	
-	<!--  
 	<build>
 		<plugins>
 			<plugin>
@@ -18,9 +17,11 @@
 				<version>2.4.0</version>
 				<configuration>
 					<webappDirectory>${project.build.outputDirectory}</webappDirectory>
+	<!--  
 			        <compileSourcesArtifacts>
 			          <artifact>org.codehaus.mojo:idei.scheduler</artifact>
 			        </compileSourcesArtifacts>
+	-->
 				</configuration>
 				<executions>
 					<execution>
@@ -33,7 +34,6 @@
 			</plugin>
 		</plugins>
 	</build>
-	-->
 	
 	<dependencies>
 		<dependency>
