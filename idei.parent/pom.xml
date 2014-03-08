@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ideitegia</groupId>
 	<artifactId>idei.parent</artifactId>
-	<version>0-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<description>master POM of the maven projects</description>
 	<name>IDEITEGIA PARENT</name>
@@ -23,6 +23,8 @@
 		<module>idei.skoolan</module>
 		
 		<module>idei.scheduler</module>
+		
+		<module>idei.common</module>
 
 
 		<!-- MAVEN PLUGINS -->
