@@ -44,14 +44,14 @@
 		
 		
 		
-<!--  
+  
 		<dependency>
 			<groupId>com.ideitegia</groupId>
 			<artifactId>idei.scheduler</artifactId>
 			<version>${project.version}</version>
-			<scope>provided</scope>
+			<scope>session</scope>
 		</dependency>
--->
+
 		
 		<!-- EXTERNAL LIBRARIES -->
 
