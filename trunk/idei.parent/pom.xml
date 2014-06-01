@@ -26,6 +26,8 @@
 		<module>idei.scheduler</module>
 		
 		<module>idei.common</module>
+		
+		<module>idei.entity</module>
 
 
 		<!-- MAVEN PLUGINS -->
