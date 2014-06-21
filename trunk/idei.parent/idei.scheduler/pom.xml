@@ -49,14 +49,14 @@
 			<groupId>com.ideitegia</groupId>
 			<artifactId>idei.entity</artifactId>
 			<version>${project.version}</version>
-			<scope>session</scope>
+			<scope>compile</scope>
 		</dependency>
 		
 		<dependency>
 			<groupId>com.ideitegia</groupId>
 			<artifactId>idei.common</artifactId>
 			<version>${project.version}</version>
-			<scope>session</scope>
+			<scope>compile</scope>
 		</dependency>
 		
 	</dependencies>
