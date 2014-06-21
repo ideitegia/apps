@@ -4,6 +4,10 @@
   <inherits name='com.google.gwt.user.User'/>
   <inherits name='com.google.gwt.uibinder.UiBinder' />
   <inherits name="com.google.gwt.i18n.I18N" />
+  
+  <inherits name='com.ideitegia.entity.Idei_entity'/>
+  <inherits name='com.ideitegia.common.Idei_common'/>
+  <inherits name='com.ideitegia.scheduler.Idei_scheduler'/>
 
   <!-- Inherit the default GWT style sheet.  You can change       -->
   <!-- the theme of your GWT application by uncommenting          -->
@@ -30,9 +34,6 @@
 	<extend-property name="locale" values="es_ES" />
 	<set-property-fallback name="locale" value="es_ES"/>
 	<set-configuration-property name="locale.useragent" value="Y" /> 
-
-  
-  <inherits name='com.ideitegia.scheduler.Idei_scheduler'/>
 
   <!-- Specify the app entry point class.                         -->
   <entry-point class='com.ideitegia.skoolan.client.Idei_common'/>
