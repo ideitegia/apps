@@ -5,9 +5,12 @@
   <inherits name='com.google.gwt.uibinder.UiBinder' />
   <inherits name="com.google.gwt.i18n.I18N" />
   
-  <inherits name='com.ideitegia.entity.Idei_entity'/>
+  <!-- Other module inherits                                      -->
+  <!--  
   <inherits name='com.ideitegia.common.Idei_common'/>
   <inherits name='com.ideitegia.scheduler.Idei_scheduler'/>
+  -->
+  <inherits name='com.ideitegia.entity.Idei_entity'/>
 
   <!-- Inherit the default GWT style sheet.  You can change       -->
   <!-- the theme of your GWT application by uncommenting          -->
@@ -19,11 +22,6 @@
   <inherits name='com.google.gwt.user.theme.standard.Standard'/> 
   <inherits name='com.google.gwt.user. theme.chrome.Chrome'/> 
   <inherits name='com.google.gwt.user.theme.dark.Dark'/>     
-  -->
-
-  <!-- Other module inherits                                      -->
-  <!--  
-  <inherits name='com.ideitegia.scheduler.Idei_scheduler'/>
   -->
 
 	<!-- Spanish language, independent of country -->
@@ -44,10 +42,6 @@
   <source path='client'/>
   <source path='shared'/>
   
-  <!--  
-  <source path="idei_scheduler"/>
-  -->
-
 	<set-property name="user.agent" value="gecko1_8" />
 	<extend-property name="user.agent" values="ie6" />
 	<extend-property name="user.agent" values="ie8" />
@@ -57,5 +51,7 @@
 	<extend-property name="user.agent" values="opera" />
 	
 	<!-- ONLY FOR DOVELOPMENT   -   REDUCES COMPILATION TIME BUT ANY OPTIMIZATION IS APPLIED-->
+	<!--  
 	<collapse-all-properties />
+	-->
 </module>
