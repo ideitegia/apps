@@ -7,9 +7,9 @@
   
   <!-- Other module inherits                                      -->
   <!--  
-  <inherits name='com.ideitegia.common.Idei_common'/>
   <inherits name='com.ideitegia.scheduler.Idei_scheduler'/>
   -->
+  <inherits name='com.ideitegia.common.Idei_common'/>
   <inherits name='com.ideitegia.entity.Idei_entity'/>
 
   <!-- Inherit the default GWT style sheet.  You can change       -->
@@ -34,8 +34,6 @@
 	<set-configuration-property name="locale.useragent" value="Y" /> 
 
   <!-- Specify the app entry point class.                         -->
-  <entry-point class='com.ideitegia.skoolan.client.Idei_common'/>
-  <entry-point class='com.ideitegia.skoolan.client.Idei_entity'/>
   <entry-point class='com.ideitegia.skoolan.client.Idei_skoolan'/>
 
   <!-- Specify the paths for translatable code                    -->
@@ -50,7 +48,7 @@
 	<extend-property name="user.agent" values="safari" />
 	<extend-property name="user.agent" values="opera" />
 	
-	<!-- ONLY FOR DOVELOPMENT   -   REDUCES COMPILATION TIME BUT ANY OPTIMIZATION IS APPLIED-->
+	<!-- ONLY FOR DOVELOPMENT   -   REDUCES COMPILATION TIME BUT NO OPTIMIZATION IS APPLIED-->
 	<!--  
 	<collapse-all-properties />
 	-->
