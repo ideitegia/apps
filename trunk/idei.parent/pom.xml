@@ -14,7 +14,7 @@
 	<properties>
 		<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
 	    <maven-build-utils.activationProfiles>perform-stats</maven-build-utils.activationProfiles>
-	    <gwtVersion>2.4.0</gwtVersion>
+	    <gwtVersion>2.6.0</gwtVersion>
 	</properties>
 
 	<modules>
@@ -28,11 +28,18 @@
 		<module>idei.common</module>
 		
 		<module>idei.entity</module>
-
+		
 
 		<!-- MAVEN PLUGINS -->
+		<!--  
+		<module>idei-maven-plugin</module>
+		-->
 	
 		<!-- DB MODULES -->
+		<!--  
+		<module>idei-db</module>
+		-->
+		<module>idei-db-jooq</module>
 		
 		<!-- FRAMEWORK -->
 	
