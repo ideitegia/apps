@@ -1,0 +1,142 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<parent>
+		<groupId>com.ideitegia</groupId>
+		<artifactId>idei.parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>idei.db.jooq</artifactId>
+	<name>IDEI DB JOOQ</name>
+	<description>IDEI DB JOOQ</description>
+
+	<build>
+		<plugins>
+			<!-- Initializes buildNumber variable -->
+			<!--  
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>buildnumber-maven-plugin</artifactId>
+				<version>1.2</version>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<goals>
+							<goal>create</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<doCheck>false</doCheck>
+					<doUpdate>false</doUpdate>
+				</configuration>
+			</plugin>
+			-->
+
+			<!-- Creates database -->
+			<!--  
+			<plugin>
+				<groupId>com.esferalia.aon</groupId>
+				<artifactId>aon-maven-plugin</artifactId>
+				<version>${project.version}</version>
+				<executions>
+					<execution>
+						<id>create-db</id>
+						<goals>
+							<goal>create-db</goal>
+						</goals>
+						<configuration>
+							<dbName>aon_jooq_${buildNumber}</dbName>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			-->
+
+			<plugin>
+
+				<!-- Specify the maven code generator plugin -->
+				<groupId>org.jooq</groupId>
+				<artifactId>jooq-codegen-maven</artifactId>
+				<version>3.3.1</version>
+
+				<!-- The plugin should hook into the generate goal -->
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+
+				<!-- Manage the plugin's dependency. We'll use a MySQL database -->
+				<dependencies>
+					<dependency>
+						<groupId>mysql</groupId>
+						<artifactId>mysql-connector-java</artifactId>
+						<version>5.0.8</version>
+					</dependency>
+				</dependencies>
+
+				<!-- Specify the plugin configuration. The configuration format is the 
+					same as for the standalone code generator -->
+				<configuration>
+
+					<!-- JDBC connection parameters -->
+					<jdbc>
+						<driver>org.gjt.mm.mysql.Driver</driver>
+						<!--  
+						<url>jdbc:mysql://127.0.0.1:3306</url>
+						-->
+						<url>jdbc:mysql://192.168.2.222:3306</url>
+						<user>dbuser</user>
+						<password>serubd2000</password>
+					</jdbc>
+
+					<!-- Generator parameters -->
+					<generator>
+						<name>org.jooq.util.DefaultGenerator</name>
+
+						<database>
+							<!-- MySQL database dialect from jooq-meta. -->
+							<name>org.jooq.util.mysql.MySQLDatabase</name>
+
+      							<!-- All elements are generated from our schema  -->
+							<includes>.*</includes>
+
+      							<!-- None elements are excluded from our schema  -->
+							<excludes />
+
+							<!--  
+							<inputSchema>aon_jooq_${buildNumber}</inputSchema>
+							-->
+							<inputSchema>idei_db</inputSchema>
+
+							<!-- Use this as the integration / production database: -->
+							<outputSchema>idei-db</outputSchema>
+						</database>
+						
+						<generate>
+						
+						</generate>
+
+						<target>
+							<packageName>idei.db.jooq</packageName>
+							<directory>target/generated-sources</directory>
+						</target>
+					</generator>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.jooq</groupId>
+			<artifactId>jooq</artifactId>
+			<version>3.3.1</version>
+		</dependency>
+
+	</dependencies>
+</project>
