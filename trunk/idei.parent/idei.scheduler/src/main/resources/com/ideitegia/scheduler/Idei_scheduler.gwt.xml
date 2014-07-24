@@ -15,10 +15,8 @@
   <inherits name='com.ideitegia.entity.Idei_entity'/>
   <inherits name='com.ideitegia.common.Idei_common'/>
   
-  <!-- Specify the app entry point class.                         -->
-  <!--  
-  <entry-point class='com.ideitegia.scheduler.client.Idei_scheduler'/>
-  -->
+  <inherits name='com.allen_sauer.gwt.dnd.gwt-dnd'/>
+  
 
   <!-- Specify the paths for translatable code                    -->
   <source path='client'/>
