@@ -20,13 +20,16 @@
 				<artifactId>gwt-maven-plugin</artifactId>
 				<version>${gwtVersion}</version>
 				<configuration>
-					<webappDirectory>${basedir}/src/main/webapp</webappDirectory>
-	<!--  
+<!--  
 			        <webappDirectory>${project.build.outputDirectory}</webappDirectory>
-			        <compileSourcesArtifacts>
-			          <artifact>org.codehaus.mojo:idei.scheduler</artifact>
-			        </compileSourcesArtifacts>
-	-->
+-->		
+					<webappDirectory>${basedir}/src/main/webapp</webappDirectory>
+<!--  
+-->
+					  <compileSourcesArtifacts>
+				        <artifact>com.ideitegia:idei.scheduler</artifact>
+				        <artifact>com.ideitegia:idei.entity</artifact>
+				      </compileSourcesArtifacts>
 				</configuration>
 				<executions>
 					<execution>
@@ -41,8 +44,6 @@
 	</build>
 	
 	<dependencies>
-		
-		
 		
   
 		<dependency>
@@ -91,18 +92,22 @@
 			<version>${gwtVersion}</version>
 			<scope>compile</scope>
 		</dependency>
+		<!--  
 		<dependency>
 			<groupId>com.google.gwt</groupId>
 			<artifactId>gwt-dev</artifactId>
 			<version>${gwtVersion}</version>
 		</dependency>
+		-->
 		<dependency>
 			<groupId>com.google.gwt</groupId>
 			<artifactId>gwt-user</artifactId>
 			<version>${gwtVersion}</version>
 			<scope>provided</scope>
 		</dependency>
-	
+		
 	</dependencies>
+
+
 	
 </project>
