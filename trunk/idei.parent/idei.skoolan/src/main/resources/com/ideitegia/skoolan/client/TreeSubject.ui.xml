@@ -1,0 +1,12 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	
+	<!--  
+	<g:GridPanel ui:field='classRoomGrid'>
+	</g:GridPanel>
+	-->
+	
+	<g:VerticalPanel ui:field='subjectGrid'>
+	</g:VerticalPanel>
+	
+</ui:UiBinder>

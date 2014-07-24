@@ -1,0 +1,194 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+  xmlns:ui="urn:ui:com.google.gwt.uibinder"
+  xmlns:g="urn:import:com.google.gwt.user.client.ui"
+  xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+  ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+  ui:generateLocales='default'>
+  
+  <ui:image field='logo' src='resources/logo.png'/>
+  <ui:image field='home' src='resources/home.png'/>
+  
+  <!-- IE6 cannot handle transparent png, which is what ImageResource creates -->
+  <ui:data field='logoIe6Data' src='resources/logo_ie6.gif' />
+
+  <ui:style>
+
+  .statusDiv {
+    text-align: right;
+    margin: 1em;
+  }
+
+  .linksDiv {
+    text-align: right;
+  }
+
+  @if user.agent ie6 {
+    @url logoIe6 logoIe6Data;
+    .logo {
+      background-image: logoIe6;
+      width: 140px;
+      height: 75px;
+      /*position: absolute;*/
+      float: left;
+      padding-right: 1em;
+    }
+  } @else {
+    @sprite .logo {
+      gwt-image: 'logo';
+      /*position: absolute;*/
+      float: left;
+      padding-right: 1em;
+    }
+  }
+  
+   @url home-img home;
+	.home {
+		text-decoration: none;
+        float: left;
+	    clear: both;
+	    background-image: home-img;
+	    padding: 0 0 0 10px;
+	    margin: 5px 0;
+	    cursor: hand;
+	}
+    
+    
+  </ui:style>
+  
+
+	<g:DockLayoutPanel unit='PT'>
+
+	    <!-- Links Bar. -->
+	    <g:north
+	      size='12'>
+	      <g:HTMLPanel>
+	        <table
+	          ui:field='linkCell'
+	          cellpadding='0'
+	          cellspacing='0'
+	          align='right'>
+	          <tr>
+	            <td>
+	              <g:Anchor>
+	                <ui:msg key='mainLinkExamples'>Usuario invitado</ui:msg>
+				  </g:Anchor>
+	              <g:Anchor>&nbsp;|&nbsp;</g:Anchor>
+	              <g:Anchor>
+	                <ui:msg key='mainLinkExamples'>Log out</ui:msg>
+				  </g:Anchor>
+	            </td>
+	          </tr>
+	        </table>
+	      </g:HTMLPanel>
+	    </g:north>
+	
+	    <!-- Title Bar. -->
+	    <g:north size='65'>
+			<g:HTMLPanel>
+				<table cellpadding='0' cellspacing='0' width='100%'>
+					<tr>
+						<td>
+							<table cellpadding='0' cellspacing='0'>
+								<tr>
+									<td style='line-height:0px'>
+										<!-- Logo Image. -->
+										<div class='{style.logo}'/>
+									</td>
+									<td>
+										<!-- Title and subtitle. -->
+										<!--  
+										<h1>
+											<ui:msg key='mainTitle'>Skoolan - ikastegien gestiorako aplikazioa</ui:msg>
+										</h1>
+										<h2>
+											<ui:msg key='mainSubTitle'>Showcase of Features</ui:msg>
+										</h2>
+										-->
+										<h2>
+											<ui:msg key='mainTitle'>Skoolan ¿? - ikastegien gestiorako aplikazioa</ui:msg>
+										</h2>
+										<h2>
+											<ui:msg key='mainSubTitle'>Showcase of Features</ui:msg>
+										</h2>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td ui:field='localeSelectionCell' align='right' valign='top'>
+							<!-- Locale selection. -->
+							<table cellpadding='0' cellspacing='0'>
+								<tr>
+									<td valign='middle'>
+									</td>
+									<td valign='middle'>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</g:HTMLPanel>
+		</g:north>
+		
+	    <g:center>
+			
+			<g:DockLayoutPanel unit='PX'>
+				
+				<!-- Main content area. -->
+				<g:center>
+					<g:DockLayoutPanel unit='PT'>
+						<g:north size='20'>
+							<!--  
+							<g:FlowPanel ui:field='contentButtons'>
+								<g:Anchor ui:field='tabExample'>
+									<ui:msg key='contentWidgetExample'>Example</ui:msg>
+								</g:Anchor>
+								<g:Anchor ui:field='tabStyle'>
+									<ui:msg key='contentWidgetStyle'>CSS Style</ui:msg>
+								</g:Anchor>
+								<g:Anchor ui:field='tabSource'>
+									<ui:msg key='contentWidgetSource'>Source Code</ui:msg>
+								</g:Anchor>
+								<g:ListBox ui:field='tabSourceList' />
+							</g:FlowPanel>
+							-->
+					        <!--  
+							<table cellpadding='0' cellspacing='0' align='right' width='100%' style="background-color: grey; color: white;">
+					          <tr>
+					            <td>Favotires</td>
+					            <td>&nbsp;|&nbsp;</td>
+					            <td>Home</td>
+					            <td>&nbsp;|&nbsp;</td>
+					            <td>About</td>
+					          </tr>
+					        </table>
+					        -->
+					        <g:FlowPanel ui:field='contentButtons'>
+								<g:Anchor>&nbsp;|&nbsp;</g:Anchor>
+								<g:Anchor ui:field='favoritesLink'>
+									<ui:msg key='contentWidgetExample'>Favorites</ui:msg>
+								</g:Anchor>
+								<g:Anchor>&nbsp;|&nbsp;</g:Anchor>
+								<g:Anchor ui:field='homeLink'>
+									<ui:msg key='contentWidgetStyle'>Home</ui:msg>
+								</g:Anchor>
+								<g:PushButton ui:field='homeButton' styleName="{style.home}"/>
+								<g:Anchor>&nbsp;|&nbsp;</g:Anchor>
+								<g:Anchor ui:field='aboutLink'>
+									<ui:msg key='contentWidgetSource'>About</ui:msg>
+								</g:Anchor>
+							</g:FlowPanel>
+						</g:north>
+		
+						<g:center>
+							<g:SimpleLayoutPanel ui:field='contentPanel' />
+						</g:center>
+					</g:DockLayoutPanel>
+				</g:center>
+			</g:DockLayoutPanel>
+		</g:center>
+
+	</g:DockLayoutPanel>
+
+</ui:UiBinder> 
