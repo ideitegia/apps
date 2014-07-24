@@ -21,14 +21,7 @@
 
 		<module>idei.uml</module>
 		
-		<module>idei.skoolan</module>
-		
-		<module>idei.scheduler</module>
-		
-		<module>idei.common</module>
-		
-		<module>idei.entity</module>
-		
+
 
 		<!-- MAVEN PLUGINS -->
 		<!--  
@@ -42,10 +35,13 @@
 		<module>idei-db-jooq</module>
 		
 		<!-- FRAMEWORK -->
+		<module>idei.common</module>
 	
 		<!-- ENTITY -->
+		<module>idei.entity</module>
 	
 		<!-- UI MODULES -->
+		<module>idei.scheduler</module>
 	
 		<!-- GWT MODULES -->
 	
@@ -54,9 +50,7 @@
 		<!-- UTILITY -->
 	
 		<!-- WEB MODULES -->
-		<!--  
-		<module>idei-web-skoolan</module>
-		-->
+		<module>idei.skoolan</module>
 
 		<!-- WS MODULES -->
 		
