@@ -10,6 +10,15 @@
 	<name>IDEI SKOOLAN</name>
 	<description>EDUCATION CENTER UNIFIED MANAGEMENT</description>
 	
+	<properties>
+		<maven.build.timestamp.format>dd/MM/yyyy</maven.build.timestamp.format>
+	</properties>
+	
+	<scm>
+		<developerConnection>scm:svn:http://dev.ideitegia.net/repos/aon-apps/trunk/idei.skoolan</developerConnection>
+		<connection>scm:svn:http://dev.ideitegia.net/repos/aon-apps/trunk/idei.skoolan</connection>
+	</scm>
+	
 	<build>
 		<finalName>idei.skoolan</finalName>
 	
