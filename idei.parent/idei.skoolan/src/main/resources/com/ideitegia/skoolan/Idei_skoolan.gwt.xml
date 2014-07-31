@@ -21,11 +21,15 @@
 	<inherits name='com.google.gwt.user.theme.dark.Dark'/>
 	-->
 
-	<!-- Spanish language, independent of country -->
-	<extend-property name="locale" values="es" />
+	<!-- Euskera language, independent of country -->
+	<extend-property name="locale" values="eus" />
 	<!-- English language, independent of country -->
 	<extend-property name="locale" values="en" />
+	<!-- Spanish language, independent of country -->
+	<extend-property name="locale" values="es" />
 	
+	<!--  
+	-->
 	<extend-property name="locale" values="es_ES" />
 	<set-property-fallback name="locale" value="es_ES"/>
 	<set-configuration-property name="locale.useragent" value="Y" />

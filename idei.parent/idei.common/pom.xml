@@ -6,7 +6,7 @@
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>idei.common</artifactId>
-	<name>COMMON</name>
+	<name>IDEI COMMON</name>
 	<description>COMMON RESOURCES FOR IDEITEGIA</description>
 	
 	<dependencies>

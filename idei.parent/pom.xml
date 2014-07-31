@@ -57,6 +57,11 @@
 		<!-- OTHER -->
 		
 	</modules>
+	
+	<scm>
+		<connection>scm:svn:http://dev.ideitegia.net/repos/aon-apps/trunk</connection>
+		<url>http://dev.ideitegia.net/websvn/wsvn</url>
+	</scm>
 
 	<organization>
 		<name>ideitegia Technology S.A.</name>
@@ -71,7 +76,7 @@
 
 	<issueManagement>
 		<system>Trac</system>
-		<url>http://trac.ideitegia.com/</url>
+		<url>http://trac.ideitegia.net/</url>
 	</issueManagement>
 
 	<repositories>
@@ -224,6 +229,7 @@
 					<tagBase>http://dev.esferalia.com/repos/aon-application/releases</tagBase>
 				</configuration>
 			</plugin>
+-->
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -242,7 +248,7 @@
 					</dependency>					
 				</dependencies>
 			</plugin>
--->
+
 			<!-- Para añadir la carpeta de los fuentes generados como source folder. -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
