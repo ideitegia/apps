@@ -3,10 +3,14 @@
   xmlns:ui="urn:ui:com.google.gwt.uibinder"
   xmlns:g="urn:import:com.google.gwt.user.client.ui"
   xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+  ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
   ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
   ui:generateLocales='default'>
   
-  <ui:image field='logo' src='resources/logo.png'/>
+  <ui:with type="com.ideitegia.common.client.i18n.CommonMessages" field="msg" />
+  <ui:with type="com.google.gwt.i18n.client.LocalizableResource" field="locale" />
+  
+  <ui:image field='logo' src='resources/gwt-logo.png'/>
   <ui:image field='home' src='resources/home.png'/>
   
   <!-- IE6 cannot handle transparent png, which is what ImageResource creates -->
@@ -52,6 +56,10 @@
 	    margin: 5px 0;
 	    cursor: hand;
 	}
+	
+	.userName {
+		display: inline;
+	}
     
     
   </ui:style>
@@ -60,8 +68,7 @@
 	<g:DockLayoutPanel unit='PT'>
 
 	    <!-- Links Bar. -->
-	    <g:north
-	      size='12'>
+	    <g:north size='25'>
 	      <g:HTMLPanel>
 	        <table
 	          ui:field='linkCell'
@@ -69,6 +76,7 @@
 	          cellspacing='0'
 	          align='right'>
 	          <tr>
+	        <!--  
 	            <td>
 	              <g:Anchor>
 	                <ui:msg key='mainLinkExamples'>Usuario invitado</ui:msg>
@@ -78,8 +86,39 @@
 	                <ui:msg key='mainLinkExamples'>Log out</ui:msg>
 				  </g:Anchor>
 	            </td>
+	        -->
+	        <td>
+		        <g:Label text="Usuario invitado" styleName='{style.userName}' />
+				<g:Button text="Log out" />
+				<g:Anchor>&nbsp;|&nbsp;</g:Anchor>
+			</td>
+			<td>
+				<g:Button ui:field="locale_es" text="ES" />
+				<g:Anchor>&nbsp;|&nbsp;</g:Anchor>
+			</td>
+			<td>
+				<g:Button ui:field="locale_eus" text="EUS" />
+				<g:Anchor>&nbsp;|&nbsp;</g:Anchor>
+			</td>
+			<td>
+				<g:Button ui:field="locale_en" text="EN" />
+				<g:Anchor>&nbsp;|&nbsp;</g:Anchor>
+			</td>
 	          </tr>
 	        </table>
+<!--  
+	         <g:FlowPanel>
+	         	<g:Label text="Usuario invitado" />
+				<g:Button text="Log out" />
+				<g:Anchor>&nbsp;|&nbsp;</g:Anchor>
+				<g:Button ui:field="locale_es" text="ES" />
+				<g:Anchor>&nbsp;|&nbsp;</g:Anchor>
+				<g:Button ui:field="locale_eus" text="EUS" />
+				<g:Anchor>&nbsp;|&nbsp;</g:Anchor>
+				<g:Button ui:field="locale_en" text="EN" />
+				<g:Anchor>&nbsp;|&nbsp;</g:Anchor>
+			</g:FlowPanel>
+-->
 	      </g:HTMLPanel>
 	    </g:north>
 	
@@ -105,9 +144,19 @@
 											<ui:msg key='mainSubTitle'>Showcase of Features</ui:msg>
 										</h2>
 										-->
+											<!--  
 										<h2>
 											<ui:msg key='mainTitle'>Skoolan ¿? - ikastegien gestiorako aplikazioa</ui:msg>
 										</h2>
+											-->
+										<h2>
+											<g:Label text="{msg.appTitle}" />
+											<!--  
+											<g:Label text="{locale.mainMenuTitle}" />
+											-->
+										</h2>
+					
+											
 										<h2>
 											<ui:msg key='mainSubTitle'>Showcase of Features</ui:msg>
 										</h2>

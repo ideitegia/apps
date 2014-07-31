@@ -4,7 +4,13 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.prefetch.Prefetcher;
+import com.google.gwt.dom.client.Document;
+import com.google.gwt.dom.client.Element;
+import com.google.gwt.dom.client.HeadElement;
+import com.google.gwt.dom.client.MetaElement;
+import com.google.gwt.dom.client.NodeList;
 import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -17,8 +23,10 @@ import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
+import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.PopupPanel;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
+import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.ScrollPanel;
 import com.google.gwt.user.client.ui.SimpleLayoutPanel;
 import com.google.gwt.user.client.ui.SimplePanel;
@@ -28,6 +36,9 @@ import com.google.gwt.user.client.ui.Tree;
 import com.google.gwt.user.client.ui.TreeItem;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
+import com.ideitegia.common.client.i18n.CommonConstants;
+import com.ideitegia.common.client.i18n.CommonMessages;
+import com.ideitegia.common.client.ui.PersonGrid;
 import com.ideitegia.scheduler.client.SchedulePreview;
 
 /**
@@ -61,7 +72,6 @@ public class Idei_skoolan implements EntryPoint {
    	*/
 	private SkoolanShell shell;
 	
-	
 	/**
 	 * This is the entry point method.
 	 */
@@ -71,6 +81,9 @@ public class Idei_skoolan implements EntryPoint {
 	    // because we want to take advantage of the entire client area.
 	    Window.enableScrolling(false);
 	    Window.setMargin("0px");
+	    
+	    // Localization
+	    ensureLocale();
 		
 		// Create the application shell.
 //	    final SingleSelectionModel<ContentWidget> selectionModel = new SingleSelectionModel<ContentWidget>();
@@ -79,7 +92,6 @@ public class Idei_skoolan implements EntryPoint {
 	    shell = new SkoolanShell(selectedContent);
 //	    shell.setContent(new Label("content"));
 	    RootLayoutPanel.get().add(shell);
-	    
 
 	    SplitLayoutPanel p = new SplitLayoutPanel();
 	    p.addWest(obtainMainTree(selectedContent), 200);
@@ -95,6 +107,22 @@ public class Idei_skoolan implements EntryPoint {
     
 	}
 	
+	private void ensureLocale() {
+		// search if exist locale in cookies
+		boolean existLocale = false;
+		// if not locale found, load user defined (or userAgent) locale
+		if(!existLocale){
+//			MetaElement metaElem = Document.get().createMetaElement();
+//			metaElem.setName("gwt:property");
+//			metaElem.setContent("locale=en");
+//			getHeadElement().appendChild(metaElem);
+		}
+	}
+	
+	 private native HeadElement getHeadElement() /*-{
+	    return $doc.getElementsByTagName("head")[0];
+	  }-*/;
+
 	private Widget obtainMainTree(SimpleLayoutPanel content){
 	    StackLayoutPanel stackPanel = new StackLayoutPanel(Unit.EM);
 	    stackPanel.addStyleName("width-all");
@@ -152,6 +180,7 @@ public class Idei_skoolan implements EntryPoint {
 		    addItem(departmentItem, null, "Dept. Natura");
 		    addItem(departmentItem, null, "Dept. Fisika");
 		    addItem(departmentItem, null, "Dept. Kimika");
+		    addItem(departmentItem, null, "Dept. Ingelesa");
 		    departmentItem.setState(false);
 		    
 		    TreeItem teacherItem = treeItems.addTextItem("Profesores");
@@ -178,7 +207,7 @@ public class Idei_skoolan implements EntryPoint {
 					} else if(arg0.getSelectedItem().getText().equals("Profesores")){
 						content.setWidget(new TreeTeacherGroup());
 					} else if(arg0.getSelectedItem().getText().equals("Alumnos")){
-						content.setWidget(new TreeAlumnGroup());
+						content.setWidget(new PersonGrid());
 					}
 				}
 			});

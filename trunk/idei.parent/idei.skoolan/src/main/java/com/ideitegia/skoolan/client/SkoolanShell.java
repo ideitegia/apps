@@ -2,6 +2,12 @@
 package com.ideitegia.skoolan.client;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.dom.client.Document;
+import com.google.gwt.dom.client.Element;
+import com.google.gwt.dom.client.HeadElement;
+import com.google.gwt.dom.client.LinkElement;
+import com.google.gwt.dom.client.MetaElement;
+import com.google.gwt.dom.client.NodeList;
 import com.google.gwt.dom.client.Style.Display;
 import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.dom.client.TableCellElement;
@@ -17,6 +23,7 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Anchor;
+import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.ListBox;
@@ -63,6 +70,12 @@ public class SkoolanShell extends ResizeComposite {
    */
   @UiField
   TableCellElement localeSelectionCell;
+  @UiField
+  Button locale_es;
+  @UiField
+  Button locale_eus;
+  @UiField
+  Button locale_en;
   
   @UiField
   FlowPanel contentButtons;
@@ -282,5 +295,71 @@ public void setSelectedContent(SimpleLayoutPanel selectedContent) {
     dlg.center();
   }
 
+	@UiHandler("locale_es")
+	void onLocaleEsClicked(ClickEvent event) {
+		changeLocale("es");
+	}
 
+	@UiHandler("locale_eus")
+	void onLocaleEusClicked(ClickEvent event) {
+		changeLocale("eus");
+	}
+
+	@UiHandler("locale_en")
+	void onLocaleEnClicked(ClickEvent event) {
+		changeLocale("en");
+	}
+
+	private void changeLocale(String localeValue) {
+		NodeList<Element> tags = Document.get().getElementsByTagName(MetaElement.TAG);
+		boolean done = false;
+		for (int i = 0; i < tags.getLength(); i++) {
+			MetaElement metaTag = ((MetaElement) tags.getItem(i));
+			if (metaTag.getName().equals("gwt:property")) {
+				metaTag.setContent(localeValue);
+				done = true;
+				Window.Location.reload();
+			}
+		}
+		if (!done) {
+			String url = GWT.getHostPageBaseURL();
+			String newUrl = url + "?locale=" + localeValue;
+			Window.Location.replace(newUrl);
+			
+//			MetaElement metaElem = Document.get().createMetaElement();
+//			metaElem.setName("gwt:property");
+//			metaElem.setContent(localeValue);	
+//			getHeadElement().appendChild(metaElem);
+//			Window.Location.reload();
+
+		}
+	}
+
+	
+	 private native HeadElement getHeadElement() /*-{
+	    return $doc.getElementsByTagName("head")[0];
+	  }-*/;
+
+	  /**
+	   * Inject the GWT theme style sheet based on the RTL direction of the current
+	   * locale.
+	   */
+//	  private void injectThemeStyleSheet() {
+//	    // Choose the name style sheet based on the locale.
+//	    String styleSheet = "gwt/" + THEME + "/" + THEME;
+//	    styleSheet += LocaleInfo.getCurrentLocale().isRTL() ? "_rtl.css" : ".css";
+//
+//	    // Load the GWT theme style sheet
+//	    String modulePath = GWT.getModuleBaseURL();
+//	    LinkElement linkElem = Document.get().createLinkElement();
+//	    linkElem.setRel("stylesheet");
+//	    linkElem.setType("text/css");
+//	    linkElem.setHref(modulePath + styleSheet);
+//	    getHeadElement().appendChild(linkElem);
+//	  }
+	
+	
+	
+	
+	
 }

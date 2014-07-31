@@ -2,20 +2,13 @@
 <module rename-to='idei_scheduler'>
   <!-- Inherit the core Web Toolkit stuff.                        -->
   <inherits name='com.google.gwt.user.User'/>
-
-  <!-- Inherit the default GWT style sheet.  You can change       -->
-  <!-- the theme of your GWT application by uncommenting          -->
-  <!-- any one of the following lines.                            -->
-  <!-- <inherits name='com.google.gwt.user.theme.clean.Clean'/>   -->
-  <!-- <inherits name='com.google.gwt.user.theme.standard.Standard'/> -->
-  <!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
-  <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>     -->
-
+  
   <!-- Other module inherits                                      -->
+  <inherits name='com.allen_sauer.gwt.dnd.gwt-dnd'/>
+
+  <!-- Self module inherits                                      -->
   <inherits name='com.ideitegia.entity.Idei_entity'/>
   <inherits name='com.ideitegia.common.Idei_common'/>
-  
-  <inherits name='com.allen_sauer.gwt.dnd.gwt-dnd'/>
   
 
   <!-- Specify the paths for translatable code                    -->

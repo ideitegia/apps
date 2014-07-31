@@ -2,14 +2,11 @@
 	xmlns:idei='urn:import:com.ideitegia.common.client.ui'
 	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
 	
-	<!--  
-	<g:GridPanel ui:field='classRoomGrid'>
-	</g:GridPanel>
-	-->
-	
-	<g:VerticalPanel ui:field='alumnGroupGrid'>
-	
-		<idei:AlumnGrid />
+	<g:VerticalPanel>
+		
+		<idei:PersonGrid />
+		
+		<g:TextBox value="alumn grig" />
 		
 	</g:VerticalPanel>
 	

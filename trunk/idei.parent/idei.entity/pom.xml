@@ -6,7 +6,7 @@
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>idei.entity</artifactId>
-	<name>ENTITY</name>
+	<name>IDEIENTITY</name>
 	<description>MODEL ENTITIES FOR IDEITEGIA</description>
 	
 	<build>
